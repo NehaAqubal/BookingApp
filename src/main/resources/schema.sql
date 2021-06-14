@@ -1,0 +1,21 @@
+DROP TABLE IF EXISTS Booking;
+CREATE TABLE Booking (  
+BOOK_ID INT AUTO_INCREMENT  PRIMARY KEY,
+C_Id INT NOT NULL, 
+From_Date date, 
+To_Date date, 
+S_address VARCHAR(50) NOT NULL,  
+D_address VARCHAR(50) NOT NULL,
+Email_Id VARCHAR(50) NOT NULL,
+Contact_No NUMBER NOT NULL,
+Status VARCHAR(10) 
+);   
+
+
+DROP TABLE IF EXISTS Payment;
+CREATE TABLE Payment(  
+payment_ID INT AUTO_INCREMENT  PRIMARY KEY,  
+book_Id INT NOT NULL, 
+amount INT NOT NULL,
+payment_status VARCHAR(50) NOT NULL
+);  
